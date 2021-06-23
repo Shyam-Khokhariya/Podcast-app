@@ -6,12 +6,12 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "l":"react-native log-android",
+    "l": "react-native log-android",
     "test": "jest",
     "lint": "eslint ."
   },
   "repository": {
-    "url": "https://github.com/Shyam-Khokhariya/Podcast-app.git"    
+    "url": "https://github.com/Shyam-Khokhariya/Podcast-app.git"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.14.1",
@@ -23,7 +23,7 @@
     "axios": "^0.21.1",
     "react": "16.13.1",
     "react-hook-form": "^6.15.4",
-    "react-native": "0.63.4",
+    "react-native": "^0.64.2",
     "react-native-app-intro-slider": "^4.0.4",
     "react-native-elements": "^3.3.0",
     "react-native-fast-image": "^8.3.4",

@@ -29,7 +29,8 @@ export default function HomeScreen({navigation}) {
       albumArtUrl: require('../assets/images/image_1.png'),
       title: 'ATTENTION',
       artist: 'Charlie Puth',
-      audioUrl: require('../assets/music/Attention.mp3'),
+      audioUrl:
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 1,
     },
     {
@@ -37,7 +38,7 @@ export default function HomeScreen({navigation}) {
       title: 'FAMOUS CRYP',
       artist: 'Blueface',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 2,
     },
     {
@@ -45,11 +46,10 @@ export default function HomeScreen({navigation}) {
       title: 'BORN TO DIE',
       artist: 'Lana Del Rey',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 3,
     },
   ];
-  
 
   const musicList = [
     {
@@ -57,7 +57,7 @@ export default function HomeScreen({navigation}) {
       title: 'THE JORDAN HAR',
       artist: 'Celeste Headlee',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 1,
     },
     {
@@ -65,7 +65,7 @@ export default function HomeScreen({navigation}) {
       title: 'FROM NEGATIVE TO POSITIVE',
       artist: 'The King of Miami',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 2,
     },
     {
@@ -73,7 +73,7 @@ export default function HomeScreen({navigation}) {
       title: 'I SURVIVED',
       artist: 'Cold Case Files',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 3,
     },
   ];
@@ -84,7 +84,7 @@ export default function HomeScreen({navigation}) {
       title: "Expeditiously with tip 'T.I.' Harris",
       artist: 'Greenwood Online Banking For Us By Us',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 1,
     },
     {
@@ -92,7 +92,7 @@ export default function HomeScreen({navigation}) {
       title: "Superman's not coming witn Erin Brockovich",
       artist: 'Lunchbreak with Yasmi...',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
       _id: 2,
     },
     {
@@ -100,7 +100,7 @@ export default function HomeScreen({navigation}) {
       title: "That's awesome with Steve Burton & Bradfor...",
       artist: 'Talking GH and Days With BRANDON BAR...',
       audioUrl:
-      'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
+        'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
 
       _id: 3,
     },
@@ -115,8 +115,7 @@ export default function HomeScreen({navigation}) {
             images={images}
             sliderBoxHeight={250}
             onCurrentImagePressed={(index) =>
-              navigation.navigate('PlayerScreen',{tracks: sliderList,index} )
-                 
+              navigation.navigate('PlayerScreen', {tracks: sliderList, index})
             }
             dotColor="#FFEE58"
             inactiveDotColor="#90A4AE"
@@ -148,12 +147,15 @@ export default function HomeScreen({navigation}) {
           <FlatList
             horizontal
             data={musicList}
-            renderItem={({item,index}) => {
+            renderItem={({item, index}) => {
               return (
                 <TouchableOpacity
                   style={styles.musicItem}
                   onPress={() =>
-                    navigation.navigate('PlayerScreen',{tracks: musicList,index} )
+                    navigation.navigate('PlayerScreen', {
+                      tracks: musicList,
+                      index,
+                    })
                   }>
                   <Image
                     source={item.albumArtUrl}
@@ -183,12 +185,15 @@ export default function HomeScreen({navigation}) {
           <View style={styles.songList}>
             <FlatList
               data={songList}
-              renderItem={({item,index}) => {
+              renderItem={({item, index}) => {
                 return (
                   <TouchableOpacity
                     style={styles.songItem}
                     onPress={() =>
-                      navigation.navigate('PlayerScreen',{tracks: songList,index})
+                      navigation.navigate('PlayerScreen', {
+                        tracks: songList,
+                        index,
+                      })
                     }>
                     <Image
                       source={item.albumArtUrl}
@@ -257,7 +262,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 20,
     marginVertical: 5,
-    backgroundColor: "#0B0B15",
+    backgroundColor: '#0B0B15',
     borderRadius: 20,
     flexDirection: 'row',
   },

@@ -49,7 +49,7 @@ const TRACKS =  [
     albumArtUrl: require('../assets/images/image_1.png'),
     title: 'ATTENTION',
     artist: 'Charlie Puth',
-    audioUrl: require('../assets/music/Attention.mp3'),
+    audioUrl:  'http://russprince.com/hobbies/files/13%20Beethoven%20-%20Fur%20Elise.mp3',
     _id: 1,
   },
   {

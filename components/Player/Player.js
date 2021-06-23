@@ -77,7 +77,7 @@ export default function Player(props) {
   const track = props.tracks[selectedTrack];
   const video = isChanging ? null : (
     <Video
-      source={track.audioUrl} // Can be a URL or a local file.
+      source={{uri:track.audioUrl}} // Can be a URL or a local file.
       ref={audioElement}
       paused={paused} // Pauses playback entirely.
       resizeMode="cover" // Fill the whole screen at aspect ratio.
